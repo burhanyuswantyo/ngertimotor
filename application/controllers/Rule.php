@@ -7,8 +7,6 @@ class Rule extends CI_Controller
     {
         $data['title'] = 'Data Rule';
         $data['rule'] = $this->rule->getAllRule();
-        // var_dump($this->rule->getAllRule());
-        // die;
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar');

@@ -87,13 +87,18 @@ class Rule_model extends CI_model
         } else {
             $gejala_tidak = $this->input->post('gejala_tidak');
         }
+        if ($this->input->post('kerusakan_id') === "") {
+            $kerusakan_id = null;
+        } else {
+            $kerusakan_id = $this->input->post('kerusakan_id');
+        }
 
         $data = [
             'gejala_id' => $this->input->post('gejala_id'),
             'parent' => $gejala_parent,
             'ya' => $gejala_ya,
             'tidak' => $gejala_tidak,
-            'kerusakan_id' => $this->input->post('kerusakan_id')
+            'kerusakan_id' => $kerusakan_id
         ];
 
         $this->db->insert('rule', $data);
@@ -116,13 +121,18 @@ class Rule_model extends CI_model
         } else {
             $gejala_tidak = $this->input->post('gejala_tidak');
         }
+        if ($this->input->post('kerusakan_id') === "") {
+            $kerusakan_id = null;
+        } else {
+            $kerusakan_id = $this->input->post('kerusakan_id');
+        }
 
         $data = [
             'gejala_id' => $this->input->post('gejala_id'),
             'parent' => $gejala_parent,
             'ya' => $gejala_ya,
             'tidak' => $gejala_tidak,
-            'kerusakan_id' => $this->input->post('kerusakan_id')
+            'kerusakan_id' => $kerusakan_id
         ];
 
         $this->db->update('rule', $data, ['id' => $id]);
