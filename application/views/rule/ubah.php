@@ -24,7 +24,6 @@
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="gejala_parent">
                             <option value="">Pilih Gejala</option>
-                            <option hidden selected value="<?= $rule['kode_gejala'] ?>"><?= $parent ?></option>
                             <?php foreach ($gejala as $g) : ?>
                                 <option value="<?= $g['kode_gejala'] ?>"><?= $g['kode_gejala'] . ' - ' . $g['gejala'] ?></option>
                             <?php endforeach; ?>
@@ -34,7 +33,6 @@
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="gejala_ya">
                             <option value="">Pilih Gejala</option>
-                            <option hidden selected value="<?= $rule['kode_gejala'] ?>"><?= $ya ?></option>
                             <?php foreach ($gejala as $g) : ?>
                                 <option value="<?= $g['kode_gejala'] ?>"><?= $g['kode_gejala'] . ' - ' . $g['gejala'] ?></option>
                             <?php endforeach; ?>
@@ -44,7 +42,6 @@
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="gejala_tidak">
                             <option value="">Pilih Gejala</option>
-                            <option hidden selected value="<?= $rule['kode_gejala'] ?>"><?= $tidak ?></option>
                             <?php foreach ($gejala as $g) : ?>
                                 <option value="<?= $g['kode_gejala'] ?>"><?= $g['kode_gejala'] . ' - ' . $g['gejala'] ?></option>
                             <?php endforeach; ?>
@@ -54,7 +51,6 @@
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="kerusakan_id">
                             <option value="">Pilih Kerusakan</option>
-                            <option hidden selected value="<?= $rule['id_kerusakan'] ?>"><?= $rule['kode_kerusakan'] . ' - ' . $rule['kerusakan'] ?></option>
                             <?php foreach ($kerusakan as $k) : ?>
                                 <option value="<?= $k['id_kerusakan'] ?>"><?= $k['kode_kerusakan'] . ' - ' . $k['kerusakan'] ?></option>
                             <?php endforeach; ?>

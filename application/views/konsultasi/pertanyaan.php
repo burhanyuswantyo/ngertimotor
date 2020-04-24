@@ -35,46 +35,22 @@
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style="background:url(<?= base_url() ?>files/assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="col-sm-2 bg-white">
                 <div class="p-3">
-                    <h2 class="mt-3 text-center">Selamat Datang!</h2>
-                    <p class="text-center"><i>Sistem Pakar Diagnosa Kerusakan Motor Injeksi Matic</i></p>
-                    <form class="mt-4" method="POST" action="<?= base_url('konsultasi/add') ?>">
+                    <h2 class="mt-3 text-center">Jawab Pertanyaan Berikut!</h2>
+                    <form class="mt-4" method="POST" action="<?= base_url('konsultasi/olah') ?>">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="text-dark" for="uname">Nama Lengkap</label>
-                                    <input class="form-control" id="nama" name="nama" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="text-dark" for="pwd">Email</label>
-                                    <input class="form-control" id="email" name="email" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="text-dark" for="pwd">Merk Motor</label>
-                                    <select class="form-control" name="merek">
-                                        <option value="">Pilih Merk</option>
-                                        <?php foreach ($merek as $m) : ?>
-                                            <option value="<?= $m['nama'] ?>"><?= $m['nama'] ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label class="text-dark" for="pwd">Seri Motor</label>
-                                    <select class="form-control" name="seri">
-                                        <option value="">Pilih Seri</option>
-                                        <?php foreach ($seri as $s) : ?>
-                                            <option value="<?= $s['nama'] ?>"><?= $s['nama'] ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <label class="text-dark text-center" for="uname"><?= $pertanyaan['gejala'] ?></label>
+                                    <table class="table table-borderless">
+                                        <tr class="text-center">
+                                            <td><input id="jawab" name="jawab" type="radio" value="<?= $pertanyaan['ya'] ?>"> Benar</td>
+                                            <td><input id="jawab" name="jawab" type="radio" value="<?= $pertanyaan['tidak'] ?>"> Salah</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <button type="submit" class="btn btn-block btn-dark">Sign In</button>
+                                <button type="submit" class="btn btn-block btn-dark">Lanjut</button>
                             </div>
                         </div>
                     </form>

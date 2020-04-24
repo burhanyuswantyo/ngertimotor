@@ -22,7 +22,6 @@
                                 <th class="text-center">Gejala sebelumnya</th>
                                 <th class="text-center" width="5%">Ya</th>
                                 <th class="text-center" width="5%">Tidak</th>
-                                <th class="text-center">Kerusakan</th>
                                 <th class="text-center" width="15%">Aksi</th>
                             </tr>
                         </thead>
@@ -35,13 +34,6 @@
                                     <td class="text-center align-middle"><?= $r['parent'] ?></td>
                                     <td class="text-center align-middle"><?= $r['ya'] ?></td>
                                     <td class="text-center align-middle"><?= $r['tidak'] ?></td>
-                                    <td class="align-middle">
-                                        <?= $r['kode_kerusakan'] ?>
-                                        <?php if ($r['kode_kerusakan'] <> null) {
-                                            echo '-';
-                                        } ?>
-                                        <?= $r['kerusakan'] ?>
-                                    </td>
                                     <td class="text-center align-middle">
                                         <a href="<?= base_url('rule/ubah/') . $r['id'] ?>" class="btn btn-sm btn-success"><span><i class="fa fa-edit"></i> Ubah</span></a>
                                         <a href="<?= base_url('rule/delete/') . $r['id'] ?>" class="btn btn-sm btn-danger"><span><i class="fa fa-trash"></i></span> Hapus</a>

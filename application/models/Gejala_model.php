@@ -25,6 +25,11 @@ class Gejala_model extends CI_model
         return $this->db->get_where('gejala', array('id_gejala' => $id))->row_array();
     }
 
+    public function getGejalaKode($kode)
+    {
+        return $this->db->get_where('gejala', array('kode_gejala' => $kode))->row_array();
+    }
+
     public function insert()
     {
         $data = [

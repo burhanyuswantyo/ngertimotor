@@ -28,34 +28,34 @@
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <h5 class="card-title">Gejala Ya</h5>
+                    <h5 class="card-title">Gejala / Kerusakan Ya</h5>
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="gejala_ya">
-                            <option value="">Pilih Gejala</option>
+                            <option value="">Pilih Gejala / Kerusakan</option>
+                            <option value="">#Gejala</option>
                             <?php foreach ($gejala as $g) : ?>
                                 <option value="<?= $g['kode_gejala'] ?>"><?= $g['kode_gejala'] . ' - ' . $g['gejala'] ?></option>
                             <?php endforeach; ?>
+                            <option value="">#Kerusakan</option>
+                            <?php foreach ($kerusakan as $k) : ?>
+                                <option value="<?= $k['kode_kerusakan'] ?>"><?= $k['kode_kerusakan'] . ' - ' . $k['kerusakan'] ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
-                    <h5 class="card-title">Gejala Tidak</h5>
+                    <h5 class="card-title">Gejala / Kerusakan Tidak</h5>
                     <div class="form-group mb-4">
                         <select class="form-control col-sm-4" name="gejala_tidak">
-                            <option value="">Pilih Gejala</option>
+                            <option value="">Pilih Gejala / Kerusakan</option>
+                            <option value="">#Gejala</option>
                             <?php foreach ($gejala as $g) : ?>
                                 <option value="<?= $g['kode_gejala'] ?>"><?= $g['kode_gejala'] . ' - ' . $g['gejala'] ?></option>
                             <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <h5 class="card-title">Kerusakan</h5>
-                    <div class="form-group mb-4">
-                        <select class="form-control col-sm-4" name="kerusakan_id">
-                            <option value="">Pilih Kerusakan</option>
+                            <option value="">#Kerusakan</option>
                             <?php foreach ($kerusakan as $k) : ?>
-                                <option value="<?= $k['id_kerusakan'] ?>"><?= $k['kode_kerusakan'] . ' - ' . $k['kerusakan'] ?></option>
+                                <option value="<?= $k['kode_kerusakan'] ?>"><?= $k['kode_kerusakan'] . ' - ' . $k['kerusakan'] ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
-
                     <div class="float-right">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Simpan</button>
                     </div>
