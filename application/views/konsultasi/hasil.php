@@ -49,11 +49,17 @@
                             </tr>
                             <tr>
                                 <td width="30%">Motor</td>
-                                <td><?= $hasil['merek'] ?></td>
+                                <td><?= $hasil['merek'] . ' ' . $hasil['seri']  ?></td>
                             </tr>
                             <tr>
                                 <td width="30%">Gejala</td>
-                                <td><?= $hasil['seri'] ?></td>
+
+                                <td><?php foreach ($gejala as $g) : ?><?= $g['gejala'] ?><br><?php endforeach; ?></td>
+
+                            </tr>
+                            <tr>
+                                <td width="30%">Kerusakan</td>
+                                <td><?= $hasil['kerusakan'] ?></td>
                             </tr>
                             <tr>
                                 <td width="30%">Solusi</td>

@@ -51,6 +51,8 @@ class Konsultasi extends CI_Controller
         $data['title'] = 'hasil';
         $id = $this->user->getId() - 1;
         $data['hasil'] = $this->user->getHasil($id);
+        $kode = $data['hasil']['kode_kerusakan'];
+        $data['gejala'] = $this->gejala->getGejalaKerusakan($kode);
 
         $this->load->view('konsultasi/hasil', $data);
     }

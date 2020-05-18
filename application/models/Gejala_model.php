@@ -30,6 +30,17 @@ class Gejala_model extends CI_model
         return $this->db->get_where('gejala', array('kode_gejala' => $kode))->row_array();
     }
 
+    public function getGejalaKerusakan($kode)
+    {
+        $this->db->select('*');
+        $this->db->from('relasi');
+        $this->db->join('kerusakan', 'relasi.kerusakan_id = kerusakan.id_kerusakan');
+        $this->db->join('gejala', 'gejala.id_gejala = relasi.gejala_id');
+        $this->db->where('kerusakan.kode_kerusakan', $kode);
+
+        return $this->db->get()->result_array();
+    }
+
     public function insert()
     {
         $data = [
